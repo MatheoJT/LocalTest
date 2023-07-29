@@ -1,0 +1,25 @@
+main: fr.baxymoz.local.LocalTest
+name: LocalTest
+version: 1.0
+authors: [Baxymoz, xxmicloxx, michidk, koca2000, Luck]
+commands:
+  play:
+    description: Play a sound
+    permission: localtest.play
+    permission-message: You don't have the permission to do this
+  stop:
+    description: Stop a sound
+    permission: localtest.stop
+    permission-message: You don't have the permission to do this
+  list:
+    description: List all sounds
+    permission: localtest.list
+    permission-message: You don't have the permission to do this
+  mount:
+    description: Mount a baby pig
+    permission: localtest.mount
+    permission-message: You don't have the permission to do this
+  laser:
+    description: Shoot a laser
+    permission: localtest.laser
+    permission-message: You don't have the permission to do this

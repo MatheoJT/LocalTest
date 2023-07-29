@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '7.1.2'
+}
+
+group 'fr.baxymoz'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+    maven {
+        url 'https://jitpack.io'
+    }
+
+    maven {
+        url 'https://hub.spigotmc.org/nexus/content/repositories/snapshots/'
+    }
+    maven { url = 'https://oss.sonatype.org/content/repositories/snapshots' }
+    maven {
+        url "https://gitlab.com/api/v4/groups/13022841/-/packages/maven"
+        name "GitLab"
+        credentials(HttpHeaderCredentials) {
+            name = 'Deploy-Token'
+            value = 'RbcJLFH_KvGNWAUAWtg-'
+        }
+        authentication {
+            header(HttpHeaderAuthentication)
+        }
+    }
+}
+
+dependencies {
+    compileOnly 'net.altarise:altarise-spigot:1.8.8'
+}
+
+jar {
+    destinationDirectory = file("C:/Users/matheo/Documents/serveur/local/plugins")
+}
+
+shadowJar {
+    classifier = 'shadow'
+}
